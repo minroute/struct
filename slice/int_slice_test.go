@@ -3,14 +3,14 @@ package structure
 import (
 	"testing"
 
-	kit "github.com/minroute/sctucture/type"
+	structure "github.com/minroute/structure/type"
 )
 
 // cmd: go test -v int_slice_test.go int_slice.go -test.run TestIsIntSlice
 func TestIsIntSlice(t *testing.T) {
 	type v []int
 	v1 := &v{1, 2, 3}
-	if kit.IsSlice(v1) {
+	if structure.IsSlice(v1) {
 		t.Error("kit.IsSlice error")
 	}
 

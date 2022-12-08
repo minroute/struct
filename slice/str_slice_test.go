@@ -3,7 +3,7 @@ package structure
 import (
 	"testing"
 
-	kit "github.com/xiiapp/kit/sctucture/type"
+	structure "github.com/minroute/structure/type"
 )
 
 // cmd: go test -v str_slice_test.go str_slice.go -test.run TestStrSlice
@@ -14,7 +14,7 @@ func TestIsStrSlice(t *testing.T) {
 	// 	t.Error("IsStrSlice error")
 	// }
 
-	if kit.IsSlice(v1) {
+	if structure.IsSlice(v1) {
 		t.Error("kit.IsSlice error")
 	}
 
