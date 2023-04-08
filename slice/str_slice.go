@@ -3,6 +3,8 @@
 //
 package structure
 
+import "strconv"
+
 type (
 	StrSlice   []string
 	StrSliceIf interface {
@@ -17,4 +19,13 @@ func IsStrSlice(d any) bool {
 		return true
 	}
 	return false
+}
+
+// IntSliceToStrSlice 将标准的[]int转成[]string
+func IntSliceToStrSlice(ints []int) []string {
+	var strs []string
+	for _, i := range ints {
+		strs = append(strs, strconv.Itoa(i))
+	}
+	return strs
 }
